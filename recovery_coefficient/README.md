@@ -10,9 +10,9 @@
 
 ## Описание данных
 Путь к файлам:
-  /datasets/gold_recovery_train.csv — обучающая выборка;
-  /datasets/gold_recovery_test.csv — тестовая выборка;
-  /datasets/gold_recovery_full.csv — исходные данные.
+*  /datasets/gold_recovery_train.csv — обучающая выборка;
+*  /datasets/gold_recovery_test.csv — тестовая выборка;
+*  /datasets/gold_recovery_full.csv — исходные данные.
 Данные индексируются датой и временем получения информации (признак date). Соседние по времени параметры часто похожи.
 
 ## Результат
