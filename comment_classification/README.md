@@ -10,21 +10,38 @@
 4. Проанализировать набор данных с разметкой о токсичности правок.
 
 ## Описание данных
-_
+Данные находятся в файле toxic_comments.csv.
+  text - текст комментария, 
+  toxic — целевой признак.
 
 ## Результат
-_
+Построена модель логистической регрессии на предобработанных данных, которая даёт результат метрики F1 = 0.75. Из прочих рассмотренных моделей данная наиболее точно угадавает негативные комментарии.
 
 ## Использованные библиотеки
-_
-* pandas
-* matplotlib.pyplot
-* train_test_split из sklearn.model_selection 
-* cross_val_score из sklearn.model_selection
-* LinearRegression из sklearn.linear_model
-* mean_squared_error из sklearn.metrics
-* RandomState из numpy.random
+* pandas as pd
+* numpy as np
+* matplotlib.pyplot as plt
+* train_test_split из sklearn.model_selection  
+* SnowballStemmer из nltk.stem
+* stopwords из nltk.corpus
+* nltk
+* TfidfVectorizer из sklearn.feature_extraction.text
+* re
+* LogisticRegression из sklearn.linear_model
+* cross_val_score sklearn.model_selection
+* f1_score из sklearn.metrics
+* confusion_matrix из sklearn.metrics
+* shuffle из sklearn.utils
+* seaborn
+* lightgbm as lgb
+* LGBMModel, LGBMRegressor из lightgbm 
 
 ## Порядок выполнения проекта
-_
+1. Загрузить данные.
+2. Подготовить данные:
+  1. Очистить текст от лишних символов (оставить только буквы и пробелы).
+  2. Привести слова в текстах к единой форме с помощью стемминга, используя SnowballStemmer из библиотеки NLTK.
+  3. Избавиться от дисбаланса классов.
+3. Обучить разные модели.
+4. Сделать выводы.
 
