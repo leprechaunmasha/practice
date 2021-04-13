@@ -8,21 +8,26 @@
 2. Построить модель, которая по фотографии определяет приблизительный возраст человека.
 
 ## Описание данных
-_
+Описание данных
+Для обучения модели предоставлен набор данных, содержащий:
+
+file_name - имя файла с фотографией,
+real_age - указанный возраст для человека, изображённого на фотграфии.
+Путь к файлу: /datasets/faces/labels.csv Путь к изображениям: /datasets/faces/final_files/
 
 ## Результат
-_
+Была проведена работа по загрузке и подготовке к работе графических данных. Для предсказания возраста покупателей на кассе была подготовлена и обучена модель ResNet. При обучении в течение 20 эпох модель показывает MAE 6.88, что ниже порогового значения 8.
 
 ## Использованные библиотеки
-_
 * pandas
 * matplotlib.pyplot
-* train_test_split из sklearn.model_selection 
-* cross_val_score из sklearn.model_selection
-* LinearRegression из sklearn.linear_model
-* mean_squared_error из sklearn.metrics
-* RandomState из numpy.random
+* ImageDataGenerator из tensorflow.keras.preprocessing.image 
+* ResNet50 из tensorflow.keras.applications.resnet import 
+* GlobalAveragePooling2D, Dense, Dropout, Flatten из tensorflow.keras.layers
+* Sequential из tensorflow.keras.models
+* Adam из tensorflow.keras.optimizers
 
 ## Порядок выполнения проекта
-_
-
+1. Провести исследовательский анализ набора фотографий.
+2. Подготовить данные к обучению, обучить нейронную сеть.
+3. Провести анализ качества нейронной сети.
